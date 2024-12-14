@@ -19,7 +19,7 @@ import {
 const API = "http://localhost:3000";
 
 // Set the categories
-const categories = ["confectionery", "electronics"];
+export const categories = ["confectionery", "electronics"];
 
 // Update the order with the given ID
 export async function update(id, amount) {
@@ -122,10 +122,10 @@ export async function listCategoryItems(category) {
         log(`${displaySuccess("IDs received from API:")}`);
         for (const item of result) {
             log(`
-                ${displayKey("ID:")}\t${displayID(item.id)}
-                ${displayKey(`Name:`)}\t${displayName(item.name)}
-                ${displayKey("RRP:")}\t${displayRRP(item.rrp)}
-                ${displayKey("Product Info:")}\n\t${displayText(item.info)}
+    ${displayKey("ID:")}\t${displayID(item.id)}
+    ${displayKey(`Name:`)}\t${displayName(item.name)}
+    ${displayKey("RRP:")}\t${displayRRP(item.rrp)}
+    ${displayKey("Product Info:")}\n\t${displayText(item.info)}
             `);
         }
     } catch (err) {
