@@ -20,6 +20,6 @@ export default async function (fastify,opts) {
   });
   fastify.post("/", async function (request, reply) {
     fastify.mockDataInsert(request, opts.prefix.slice(1), data);
-    return data
+    return data;
   });
 }
